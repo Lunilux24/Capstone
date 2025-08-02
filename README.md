@@ -215,7 +215,8 @@ ___
 
 
 ARCHITECHTURE DIAGRAM:
-![SystemArchitechture drawio](https://github.com/user-attachments/assets/490e15c7-5621-489b-a8b7-8c982f677cdf)
+<img width="2272" height="1381" alt="432092315-490e15c7-5621-489b-a8b7-8c982f677cdf" src="https://github.com/user-attachments/assets/75d609f9-f355-4cee-919e-b63b680aa857" />
+
 ## Software Architecture Diagram Description
 
 ### Outer Layer: Docker Container (Parent)
@@ -261,7 +262,8 @@ This forms a classic three-tier architecture (Presentation, Application, Data) r
 
 
 LEVEL 1 DFD
-![data_flow-LEVEL 1 drawio](https://github.com/user-attachments/assets/90ec95e3-066a-475b-a20f-56bcef846670)
+<img width="1418" height="1310" alt="432092596-90ec95e3-066a-475b-a20f-56bcef846670" src="https://github.com/user-attachments/assets/ee4adc41-149f-4c34-80c4-56e241a915ca" />
+
 # Level 1 Data Flow Diagram (DFD) Description
 
 ## External Entities (Users):
@@ -475,12 +477,12 @@ Once the terminal shows the following image, the container is built and we can n
 
 ## Navigating the site
 Upon navigating to localhost:5173 you will see the following login page:
+![432128404-079a6310-121b-46a8-96c6-d842f18e9100](https://github.com/user-attachments/assets/5fad95c3-e958-44fd-99ca-e00b9772d787)
 
-![Screenshot 2025-04-09 215334](https://github.com/user-attachments/assets/079a6310-121b-46a8-96c6-d842f18e9100)
 
 Login with the admin credentials to view all aspects of the site. Once logged in, you should recieve a confirmation toast for your login and will be directed to the main page of the site. 
+![432128545-7429ca00-4381-489a-9635-bafa2b0880cf](https://github.com/user-attachments/assets/40c3a8e3-a60c-48a3-a292-43aa7b235c0b)
 
-![Screenshot 2025-04-09 215620](https://github.com/user-attachments/assets/7429ca00-4381-489a-9635-bafa2b0880cf)
 
 ### Main Page
 
@@ -495,8 +497,8 @@ Clicking on the new comparison button will prompt a small menu to upload pdfs in
 ### Comparison Page
 
 Upon clicking on Comparison 1, we can see the following page:
+![432129785-e9a26a73-f547-4e08-86bf-889baecc2191](https://github.com/user-attachments/assets/3c9b065e-5602-4630-89ed-ade315a810ca)
 
-![Screenshot 2025-04-09 221023](https://github.com/user-attachments/assets/e9a26a73-f547-4e08-86bf-889baecc2191)
 
 We can now see the differences that the ML model found during its analysis. It will tell you the difference and the page it was found on. To the right of the difference, we can see a small feedback panel where brokers can approve, disapprove or write comments on differences. At the top of the page, we can also see 3 buttons. A download summary button to download a summary of all the differences found in the two compared documents along with any feedback from other brokers. Next to that is a Highlighted Text button that lets you view where the comparisons were made on the original document highlighted for ease of access. You can also download the highlighted document as well. Last is the self explanatory Delete Comparison button. 
 
@@ -504,7 +506,7 @@ The last page on the walkthough is the Admin page where admin users can create t
 
 ### Admin Page
 
-![Screenshot 2025-04-09 220017](https://github.com/user-attachments/assets/77bed837-4135-4e7b-8f08-e115d8c8d689)
+![432129888-77bed837-4135-4e7b-8f08-e115d8c8d689](https://github.com/user-attachments/assets/249ec7d1-1429-4a97-8b83-5b9d04b4f6cd)
 
 We can switch between looking at users and looking at teams with the button on the left. The button on the right allows you to create a team/user by filling out a form with information such as name, team, etc.
 
