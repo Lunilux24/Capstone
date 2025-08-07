@@ -1,4 +1,79 @@
 
+# System Walkthrough
+## Running the Docker Container
+To run the docker container, start by running the command ```docker-compose up --build``` in the terminal.
+
+Once the terminal shows the following image, the container is built and we can navigate to port 5173 to view the site. 
+
+## Navigating the site
+Upon navigating to localhost:5173 you will see the following login page:
+![432128404-079a6310-121b-46a8-96c6-d842f18e9100](https://github.com/user-attachments/assets/5fad95c3-e958-44fd-99ca-e00b9772d787)
+
+
+Login with the admin credentials to view all aspects of the site. Once logged in, you should recieve a confirmation toast for your login and will be directed to the main page of the site. 
+![432128545-7429ca00-4381-489a-9635-bafa2b0880cf](https://github.com/user-attachments/assets/40c3a8e3-a60c-48a3-a292-43aa7b235c0b)
+
+
+### Main Page
+
+- SUN: Dark mode toggle
+- GLOBE: Language toggle between English/French
+- ?: Help and FAQ page
+- ABOUT: About page
+- PROFILE: Brings up toggle menu with personal info button, activity log and admin page
+
+Clicking on the new comparison button will prompt a small menu to upload pdfs in order to generate a new comparison. 
+
+### Comparison Page
+
+Upon clicking on Comparison 1, we can see the following page:
+![432129785-e9a26a73-f547-4e08-86bf-889baecc2191](https://github.com/user-attachments/assets/3c9b065e-5602-4630-89ed-ade315a810ca)
+
+
+We can now see the differences that the ML model found during its analysis. It will tell you the difference and the page it was found on. To the right of the difference, we can see a small feedback panel where brokers can approve, disapprove or write comments on differences. At the top of the page, we can also see 3 buttons. A download summary button to download a summary of all the differences found in the two compared documents along with any feedback from other brokers. Next to that is a Highlighted Text button that lets you view where the comparisons were made on the original document highlighted for ease of access. You can also download the highlighted document as well. Last is the self explanatory Delete Comparison button. 
+
+The last page on the walkthough is the Admin page where admin users can create teams and accounts for brokers.
+
+### Admin Page
+
+![432129888-77bed837-4135-4e7b-8f08-e115d8c8d689](https://github.com/user-attachments/assets/249ec7d1-1429-4a97-8b83-5b9d04b4f6cd)
+
+We can switch between looking at users and looking at teams with the button on the left. The button on the right allows you to create a team/user by filling out a form with information such as name, team, etc.
+
+# Features & Bugs
+## Features
+### Account
+- Individual accounts for brokers to manage insurance policies
+- Admin account to manage teams of brokers as well as individual accounts for brokers
+- Users can view their account activity from the activity log
+- Users can change their info in the account page
+
+### Teams
+- Brokers are assigned a team by an admin account where they will then be able to see all documents and policies being worked on by team members
+- Admins can delete and edit these teams from the admin page
+
+### Policies
+- Users can upload policies
+- Users can create comparisons from 2 uploaded policies
+- Users can search for comparisons
+- Users can delete comparisons
+- Users can leave comments and feedback on individual differences within a comparison
+- Users can delete differences within a comparison
+- Users can view highlighted differences from a highlighted differences tab
+	- Highlighted differences are color coded to show confidence levels
+	- Users can download the highlighted pdfs
+
+### System
+- Dark mode
+- Multilingual support
+- Help & FAQ page
+
+## Known Bugs
+- Color coded differences do not show on the comparison page
+- Dead links on Help & FAQ page
+- Docker container needs restart on intial build
+
+
 # Project-Structure
 
 Please use the provided folder structure for your docs (project plan, design documenation, communications log, weekly logs and final documentation), source code, tesing, etc.    You are free to organize any additional internal folder structure as required by the project.  The team **MUST** use a branching workflow and once an item is ready, do remember to issue a PR, review and merge in into the master brach.
@@ -435,78 +510,4 @@ These results suggest that the application's processing time scales linearly wit
 This report evaluates the performance of the policy comparer in analyzing and comparing insurance policy documents. The analysis was conducted on two sets of shortened policy documents (Set 2 from the provided ones), and the full documents. Key performance metrics considered include execution time, accuracy, comprehensiveness, and efficiency. The comparator successfully highlighted policy modifications, including changes in premiums, adjustments in coverage, updates to named insureds, and modifications to certain clauses. The detection accuracy was ok (needs improvement), ensuring that a good amount of critical differences were captured. The execution time was efficient, taking between 4-10 seconds for the shortened set of policies and approximately 40 seconds to a minute for a full document comparison. This indicates a scalable execution time relative to document size, which is a crucial factor for processing bulk data efficiently.
 
 The comparer performed well in identifying policy changes, but there are areas for improvement. Implementing parallelized comparisons could further reduce execution time, and automated summarization could enhance readability. Additionally, scalability testing on larger datasets can help validate performance under high loads. Future enhancements should focus on improving report generation for better user insights. Our current plan is to add highlighting based on confidence interval to better help brokers understand the differences present between policies. Overall, the policy comparer demonstrated strong performance in efficiency and decent performance in accuracy, making it a valuable tool for policy analysis and comparison. With our future UI/UX updates we plan to have ready upon deployment, we anticipate an even better experience for brokers without having to focus too much on improving performance metrics such as parsing, accuracy and speed.
-
-# Features & Bugs
-## Features
-### Account
-- Individual accounts for brokers to manage insurance policies
-- Admin account to manage teams of brokers as well as individual accounts for brokers
-- Users can view their account activity from the activity log
-- Users can change their info in the account page
-
-### Teams
-- Brokers are assigned a team by an admin account where they will then be able to see all documents and policies being worked on by team members
-- Admins can delete and edit these teams from the admin page
-
-### Policies
-- Users can upload policies
-- Users can create comparisons from 2 uploaded policies
-- Users can search for comparisons
-- Users can delete comparisons
-- Users can leave comments and feedback on individual differences within a comparison
-- Users can delete differences within a comparison
-- Users can view highlighted differences from a highlighted differences tab
-	- Highlighted differences are color coded to show confidence levels
-	- Users can download the highlighted pdfs
-
-### System
-- Dark mode
-- Multilingual support
-- Help & FAQ page
-
-## Known Bugs
-- Color coded differences do not show on the comparison page
-- Dead links on Help & FAQ page
-- Docker container needs restart on intial build
-
-# System Walkthrough
-## Running the Docker Container
-To run the docker container, start by running the command ```docker-compose up --build``` in the terminal.
-
-Once the terminal shows the following image, the container is built and we can navigate to port 5173 to view the site. 
-
-## Navigating the site
-Upon navigating to localhost:5173 you will see the following login page:
-![432128404-079a6310-121b-46a8-96c6-d842f18e9100](https://github.com/user-attachments/assets/5fad95c3-e958-44fd-99ca-e00b9772d787)
-
-
-Login with the admin credentials to view all aspects of the site. Once logged in, you should recieve a confirmation toast for your login and will be directed to the main page of the site. 
-![432128545-7429ca00-4381-489a-9635-bafa2b0880cf](https://github.com/user-attachments/assets/40c3a8e3-a60c-48a3-a292-43aa7b235c0b)
-
-
-### Main Page
-
-- SUN: Dark mode toggle
-- GLOBE: Language toggle between English/French
-- ?: Help and FAQ page
-- ABOUT: About page
-- PROFILE: Brings up toggle menu with personal info button, activity log and admin page
-
-Clicking on the new comparison button will prompt a small menu to upload pdfs in order to generate a new comparison. 
-
-### Comparison Page
-
-Upon clicking on Comparison 1, we can see the following page:
-![432129785-e9a26a73-f547-4e08-86bf-889baecc2191](https://github.com/user-attachments/assets/3c9b065e-5602-4630-89ed-ade315a810ca)
-
-
-We can now see the differences that the ML model found during its analysis. It will tell you the difference and the page it was found on. To the right of the difference, we can see a small feedback panel where brokers can approve, disapprove or write comments on differences. At the top of the page, we can also see 3 buttons. A download summary button to download a summary of all the differences found in the two compared documents along with any feedback from other brokers. Next to that is a Highlighted Text button that lets you view where the comparisons were made on the original document highlighted for ease of access. You can also download the highlighted document as well. Last is the self explanatory Delete Comparison button. 
-
-The last page on the walkthough is the Admin page where admin users can create teams and accounts for brokers.
-
-### Admin Page
-
-![432129888-77bed837-4135-4e7b-8f08-e115d8c8d689](https://github.com/user-attachments/assets/249ec7d1-1429-4a97-8b83-5b9d04b4f6cd)
-
-We can switch between looking at users and looking at teams with the button on the left. The button on the right allows you to create a team/user by filling out a form with information such as name, team, etc.
 
