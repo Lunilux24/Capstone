@@ -1,3 +1,6 @@
+# Introduction
+
+The BFL Canada Insurance Policy comparer was designed to make policy reviewer's lives easier. Our system compares 2 different versions of insurance policies and scans for the differences using a specialized ML model built from the ground up. Through the usage of PDF parsing libraries such as PyPDF2, our model highlights lines based on a confidence interval revealing where discrepencies may exist between the two policy versions. From there, users have the option to approve or discard these potential discrepencies saving time and the headache of manually reviewing these sometimes 100+ page documents.
 
 # System Walkthrough
 ## Running the Docker Container
